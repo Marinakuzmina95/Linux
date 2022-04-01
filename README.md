@@ -1,1 +1,1 @@
-# Linux
+Work with Terminal. Homework
