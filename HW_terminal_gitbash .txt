@@ -1,0 +1,42 @@
+1) Посмотреть где я:    pwd
+2) Создать папку:    mkdir DZ_terminal
+3) Зайти в папку:    cd DZ_terminal
+4) Создать 3 папки:    mkdir directory_1 directory_2 directory_3
+5) Зайти в любую папку:    cd directory_1
+6) Создать 5 файлов (3 txt, 2 json):    touch t_file_1.txt t_file_2.txt t_file_3.txt j_file_1.json j_file_2.json 
+7) Создать 3 папки:    mkdir dir_1 dir_2 dir_3
+8) Вывести список содержимого папки:    ls -al
+9) Открыть любой txt файл:    vim t_file_1.txt
+10) Написать туда что-нибудь, любой текст:    The lesson is devoted to the study of the Linux terminal (gitbash)                  
+11) Сохранить и выйти:    (esc) :wq (после можно проверить содержимое файла командой cat t_file_1.txt)
+12) Выйти из папки на уровень выше:    cd ..
+—
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку:    mv {t_file_1.txt,t_file_2.txt} dir_1/
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку:    cp {j_file_1.json,t_file_3.txt} dir_2/
+15) Найти файл по имени (поиск начинается с папки, в которой находимся на данный момент):    find . -name t_file_1.txt
+16) Просмотреть содержимое в реальном времени:   tail -f t_file_1.txt 
+17) Вывести несколько первых строк из текстового файла:    head -n4 t_file_1.txt (выведет первые 4 строки файла)
+18) Вывести несколько последних строк из текстового файла:     tail -n4 t_file_1.txt (выведет последние 4 строки файла)
+19) Просмотреть содержимое длинного файла:    less t_file_2.txt
+20) Вывести дату и время: date
+
+Задание *
+1) Отправить http-запрос на сервер:    curl "http://162.55.220.72:5005/get_method?name="Marina"&age=27"
+
+2) Написать скрипт, который автоматически выполнит пункты 3, 4, 5, 6, 7, 8, 13
+	- Создать текстовый файл touch script.txt
+	- Прописать в файле следующее содержимое:
+		#!/bin/bash
+		cd d:/gitbash/;
+		mkdir folder_1 folder_2 folder_3;
+		cd folder_1;
+		touch f1.txt f2.txt f3.txt f4.json f5.json;
+		mkdir fol_1_1 fol_1_2 fol_1_3;
+		ls -la;
+		mv {f1.txt,f2.txt} fol_1_1/;
+	- Сохраняем файл    (esc) :wq
+	- Делаем файл исполняемым    chmod +x ./ script.txt
+	- Запуск скрипта    ./ script.txt
+
+
+           
